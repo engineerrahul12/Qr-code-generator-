@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Generator | Rahul Sah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">QR<span>Gen</span></div>
+    <div class="creator">Crafted by Rahul Sah</div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <p class="badge">⚡ Fast • Free • Private</p>
+      <h1>QR Code Generator</h1>
+      <p>Create beautiful QR codes instantly from text, links, phone numbers and more.</p>
+    </section>
+
+    <section class="generator">
+
+      <div class="panel controls">
+
+        <label for="qrText">Enter text or URL</label>
+
+        <textarea
+          id="qrText"
+          placeholder="https://example.com"
+        ></textarea>
+
+        <div class="options">
+
+          <div>
+            <label for="size">QR Size</label>
+            <select id="size">
+              <option value="200">200 × 200</option>
+              <option value="300" selected>300 × 300</option>
+              <option value="400">400 × 400</option>
+              <option value="500">500 × 500</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="darkColor">QR Color</label>
+            <input type="color" id="darkColor" value="#000000">
+          </div>
+
+          <div>
+            <label for="lightColor">Background</label>
+            <input type="color" id="lightColor" value="#ffffff">
+          </div>
+
+        </div>
+
+        <button id="generateBtn" class="generate">
+          Generate QR Code
+        </button>
+
+        <button id="clearBtn" class="clear">
+          Clear
+        </button>
+
+      </div>
+
+
+      <div class="panel preview">
+
+        <h2>Preview</h2>
+
+        <div class="qr-box">
+          <div id="qrcode"></div>
+
+          <div id="emptyMessage">
+            <div class="empty-icon">▦</div>
+            <p>Your QR code will appear here</p>
+          </div>
+        </div>
+
+        <button id="downloadBtn" class="download" disabled>
+          ↓ Download PNG
+        </button>
+
+      </div>
+
+    </section>
+
+    <section class="features">
+
+      <div class="feature">
+        <span>⚡</span>
+        <h3>Instant</h3>
+        <p>Generate QR codes in seconds.</p>
+      </div>
+
+      <div class="feature">
+        <span>🔒</span>
+        <h3>Private</h3>
+        <p>Your data stays in your browser.</p>
+      </div>
+
+      <div class="feature">
+        <span>📱</span>
+        <h3>Responsive</h3>
+        <p>Works perfectly on mobile devices.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Rahul Sah • QR Generator
+  </footer>
+
+  <!-- QR Code library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
